@@ -342,6 +342,64 @@ make clean
 | Secure Storage (Keyring) | ✅ Completo |
 | ELI5 Mode | ✅ Completo |
 | What-If Simulator | ✅ Completo |
+| Streaming Response | ✅ Completo |
+
+---
+
+## Ideas Parking Lot
+
+Funcionalidades futuras em consideracao:
+
+### Infraestrutura de Modelos
+
+| Idea | Descricao |
+|------|-----------|
+| Local Model (Gemma) | Backend alternativo via Google Gemma 12B quantizado para uso offline |
+| Model Router | Auto-selecao: tarefas simples → Gemma local, complexas → Gemini API |
+| Fallback Chain | Se API falhar, tenta modelo local automaticamente |
+
+### Inteligencia Contextual
+
+| Idea | Descricao |
+|------|-----------|
+| Shell History Aware | Ler ~/.bash_history para entender contexto do usuario |
+| Cwd Context | Enviar `ls`, `git status`, `pwd` automaticamente como contexto |
+| Error Recovery | Quando comando falha, auto-sugerir correcao baseado no stderr |
+| Learn from Corrections | Usuario corrige comando → modelo lembra para proxima vez |
+
+### Produtividade
+
+| Idea | Descricao |
+|------|-----------|
+| Pipes Inteligentes | `ls \| tt "filtre so os .cpp"` - processa stdin |
+| Alias Generator | `tt --alias "compilar projeto debug"` → gera alias .bashrc |
+| Script Generator | `tt --script "backup incremental para S3"` → gera .sh completo |
+| Cron Helper | `tt --cron "todo dia as 3am"` → gera crontab entry |
+
+### Educacional
+
+| Idea | Descricao |
+|------|-----------|
+| Challenge Mode | Gamificacao: "Tente fazer X sem usar grep" |
+| Man Page TL;DR | `tt tldr rsync` - resumo pratico do man |
+| Diff Explainer | `git diff \| tt "explique essas mudancas"` |
+| Learning Path | Progressao: iniciante → intermediario → avancado |
+
+### Seguranca Avancada
+
+| Idea | Descricao |
+|------|-----------|
+| Dry-run Mode | `--dry` mostra o que faria sem executar |
+| Sandbox Exec | Executar comandos perigosos em container isolado |
+| Audit Log | Historico de todos comandos executados via tt |
+
+### Integracoes
+
+| Idea | Descricao |
+|------|-----------|
+| Git Integration | `tt commit` → gera mensagem baseada no diff |
+| Docker Helper | `tt docker "rodar postgres com persistencia"` |
+| SSH Context | Detectar quando esta em host remoto e adaptar |
 
 ---
 
